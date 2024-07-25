@@ -1,0 +1,146 @@
+ERROR - 2024-07-17 15:11:26 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_telefonica' in C:\xampp\htdocs\fs2024\db_telefonica\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_telefonica', 3306, '', 0)
+#1 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fs2024\db_telefonica\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2024\db_telefonica\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2024\db_telefonica\app\Controllers\Lineas.php(10): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(933): App\Controllers\Lineas->index()
+#8 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lineas))
+#9 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\db_telefonica\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\db_telefonica\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\db_telefonica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_telefonica' in C:\xampp\htdocs\fs2024\db_telefonica\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\fs2024\db_telefonica\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\fs2024\db_telefonica\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\fs2024\db_telefonica\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\fs2024\db_telefonica\app\Controllers\Lineas.php(10): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(933): App\Controllers\Lineas->index()
+#7 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lineas))
+#8 C:\xampp\htdocs\fs2024\db_telefonica\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fs2024\db_telefonica\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fs2024\db_telefonica\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\fs2024\db_telefonica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-17 15:11:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_telefonica'
+[Method: GET, Route: ver_lineas]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lineas_telefonicas`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Lineas.php(10): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Lineas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lineas))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:00:07 --> ErrorException: Undefined array key "cliente_id"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 54.
+ 1 APPPATH\Views\planes.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cliente_id"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:27 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:28 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:28 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:28 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:28 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 16:29:29 --> ErrorException: Undefined array key "cantidada_mensajes"
+[Method: GET, Route: ver_planes]
+in APPPATH\Views\planes.php on line 56.
+ 1 APPPATH\Views\planes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidada_mensajes"', 'C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\db_telefonica\\app\\Views\\planes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('planes', [], true)
+ 5 APPPATH\Controllers\Planes.php(11): view('planes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Planes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Planes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
